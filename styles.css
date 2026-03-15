@@ -331,6 +331,85 @@ img {
   line-height: 1.65;
 }
 
+/* ===== Portfolio ===== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  border-color: rgba(255, 165, 0, 0.25);
+  box-shadow: 0 8px 30px rgba(255, 165, 0, 0.08);
+}
+
+.portfolio-img {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-img img {
+  transform: scale(1.02);
+}
+
+.portfolio-info {
+  padding: 2rem;
+}
+
+.portfolio-info h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-info h3 a {
+  color: #1a1a1a;
+  transition: color 0.2s;
+}
+
+.portfolio-info h3 a:hover {
+  color: #FFA500;
+}
+
+.portfolio-info p {
+  font-size: 0.925rem;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.portfolio-tags span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 165, 0, 0.08);
+  color: #FFA500;
+  border-radius: 2rem;
+}
+
 /* ===== Steps ===== */
 .steps {
   max-width: 40rem;
