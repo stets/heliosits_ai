@@ -129,7 +129,7 @@ img {
   display: inline-block;
   padding: 0.875rem 2rem;
   background: #FFA500;
-  color: #fff;
+  color: #1a1a1a;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
@@ -141,19 +141,19 @@ img {
 }
 
 .btn:hover {
-  background: #2BA7ED;
-  border-color: #2BA7ED;
+  background: #096b9e;
+  border-color: #096b9e;
   color: #fff;
 }
 
 .btn-outline {
   background: transparent;
-  color: #FFA500;
+  color: #805000;
 }
 
 .btn-outline:hover {
   background: #FFA500;
-  color: #fff;
+  color: #1a1a1a;
 }
 
 .btn-sm {
@@ -709,6 +709,7 @@ img {
   }
 
   .nav-links {
+    visibility: hidden;
     position: fixed;
     top: 0;
     right: -100%;
@@ -726,6 +727,7 @@ img {
 
   .nav-links.open {
     right: 0;
+    visibility: visible;
   }
 
   .hero {
@@ -797,4 +799,60 @@ img {
   .hero-actions .btn {
     text-align: center;
   }
+}
+
+/* Inquiry flow and service pages share the existing type and sun-orange brand. */
+.nav-links .btn { color: #1a1a1a; }
+.nav-links .btn:hover { color: #fff; }
+.hero-eyebrow, .section-eyebrow, .trust-item strong { color: #805000; }
+.portfolio-tags span { color: #805000; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #096b9e;
+  outline-offset: 4px;
+}
+.skip-link {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: .75rem 1rem;
+  background: #fff;
+  color: #1a1a1a;
+}
+.skip-link:focus { top: 1rem; }
+.text-link, .prose a, .faq-content a {
+  color: #805000;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  font-weight: 500;
+}
+.service-card .text-link { display: inline-block; margin-top: 1rem; }
+.prose { max-width: 50rem; }
+.prose h2 { font-size: 1.65rem; margin: 2.5rem 0 1rem; }
+.prose p { margin-bottom: 1.25rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin: 1.25rem 0; }
+.prose li { margin-bottom: .75rem; }
+.breadcrumb { margin-bottom: 1.5rem; font-size: .9rem; }
+.breadcrumb a { text-decoration: underline; text-underline-offset: .2em; }
+.faq-content { max-width: 50rem; }
+details { border-bottom: 1px solid #ddd; padding: 1.25rem 0; }
+summary { font-weight: 500; color: #1a1a1a; cursor: pointer; }
+details p { margin: 1rem 0 0; }
+.cta-form label { display: block; color: #fff; font-weight: 500; }
+.cta-form label span { font-weight: 300; color: #ccc; }
+.cta-form input, .cta-form select, .cta-form textarea { margin-top: .4rem; }
+.cta-form input::placeholder, .cta-form textarea::placeholder { color: #bbb; }
+.cta-form select { color: #ccc; }
+.cta-form .form-note { color: #d6d6d6; font-size: .85rem; margin: 0 0 1.25rem; }
+.form-note a { color: #ffbc40; text-decoration: underline; overflow-wrap: anywhere; }
+.cta-form .form-fallback { margin: 1.25rem 0 0; text-align: center; }
+.email-inquiry .form-note { color: #d6d6d6; font-size: .9rem; margin: 1.5rem 0 0; }
+.cta-form .form-honeypot { display: none; }
+.cta-form button:disabled { cursor: wait; opacity: .8; }
+.footer-links a { color: #b6b6b6; overflow-wrap: anywhere; }
+.footer-brand p, .footer-bottom { color: #b6b6b6; }
+.nav-toggle { position: relative; z-index: 1001; min-width: 44px; min-height: 44px; justify-content: center; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
 }
